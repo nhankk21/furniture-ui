@@ -4,40 +4,53 @@ import {useAppDispatch} from '../hooks/redux';
 import {apiClient} from '../lib/api';
 import {addPromise} from '../redux/reducers/xhr';
 import ProductsSlider from './ProductsSlider';
+import axios from '../lib/axios';
+import {API_GET_PRODUCT} from '../constants/api_key';
 
-export default function ProductsSliderByQuery({query, title, className, wrapperClassName}: ProductsSliderByQueryProps) {
-	const dispatch = useAppDispatch();
-	const [products, setProducts] = useState<IProduct[] | null>(null);
-	const [loading, setLoading] = useState(false);
+export default function ProductsSliderByQuery({
+  query,
+  title,
+  className,
+  wrapperClassName,
+}: ProductsSliderByQueryProps) {
+  const dispatch = useAppDispatch();
+  const [products, setProducts] = useState<IProduct[] | null>(null);
+  const [loading, setLoading] = useState(false);
 
-	useEffect(() => {
-		setLoading(true);
+  useEffect(() => {
+    setLoading(true);
 
-		const promise = apiClient.catalog.getProducts(query)
-			.then(({products}) => setProducts(products))
-			.catch((err) => console.error(err))
-			.finally(() => setLoading(false));
+    const productTest = axios.get(API_GET_PRODUCT).then((res) => res.data);
 
-		dispatch(addPromise(promise));
+    console.log(productTest);
 
-	}, [query]); //eslint-disable-line
+    const promise = apiClient.catalog
+      .getProducts(query)
+      .then(({products}) => setProducts(products))
+      .catch((err) => console.error(err))
+      .finally(() => setLoading(false));
 
-	if (products && !loading && !products.length) return null;
+    dispatch(addPromise(promise));
+  }, [query]); //eslint-disable-line
 
-	return <div className={wrapperClassName || ''}>
-		{title && <h2 className='products-slider__by-query-title'>{title}</h2>}
-		<ProductsSlider
-			className={className}
-			loading={loading}
-			products={products}
-			// swiperProps={{loop: true}}
-		/>
-	</div>;
+  if (products && !loading && !products.length) return null;
+
+  return (
+    <div className={wrapperClassName || ''}>
+      {title && <h2 className='products-slider__by-query-title'>{title}</h2>}
+      <ProductsSlider
+        className={className}
+        loading={loading}
+        products={products}
+        // swiperProps={{loop: true}}
+      />
+    </div>
+  );
 }
 
 interface ProductsSliderByQueryProps {
-	title?: string;
-	className?: string;
-	wrapperClassName?: string;
-	query: IGetProductsParams;
+  title?: string;
+  className?: string;
+  wrapperClassName?: string;
+  query: IGetProductsParams;
 }

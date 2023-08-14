@@ -9,15 +9,15 @@ const apiClient = new BoundlessClient(permanentToken);
 apiClient.setInstanceId(process.env.BOUNDLESS_INSTANCE_ID as unknown as number);
 
 if (baseURL) {
-	apiClient.setBaseUrl(baseURL);
+  apiClient.setBaseUrl(baseURL);
 }
 
 if (s3Prefix) {
-	apiClient.setS3FolderPrefix(s3Prefix);
+  apiClient.setS3FolderPrefix(s3Prefix);
 }
 
 if (mediaServer) {
-	apiClient.setMediaServerUrl(mediaServer);
+  apiClient.setMediaServerUrl(mediaServer);
 }
 
 export {apiClient};
