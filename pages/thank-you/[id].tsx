@@ -1,5 +1,5 @@
 import {useRouter} from 'next/router';
-import {StarterWrapper, startOrderInfo} from 'boundless-checkout-react';
+import {StarterWrapper, startOrderInfo} from 'Boundless-checkout-react';
 import {apiClient} from '../../lib/api';
 import MainLayout from '../../layouts/Main';
 import {GetServerSideProps} from 'next';

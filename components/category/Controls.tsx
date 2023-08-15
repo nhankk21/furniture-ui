@@ -3,7 +3,7 @@ import SortButtons from '../SortButtons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSlidersH} from '@fortawesome/free-solid-svg-icons/faSlidersH';
 
-export default function CaregoryControls({params, onSort, onMobileShow}: ControlBarProps) {
+export default function CategoryControls({params, onSort, onMobileShow}: ControlBarProps) {
 	return (
 		<div className='category-controls'>
 			<div className='category-controls__mobile'>

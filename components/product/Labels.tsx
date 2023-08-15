@@ -1,4 +1,4 @@
-import {ILabel, TLabelIcon} from 'boundless-api-client';
+import {ILabel, TLabelIcon} from 'Boundless-api-client';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faStar} from '@fortawesome/free-solid-svg-icons/faStar';
 import {faFlag} from '@fortawesome/free-solid-svg-icons/faFlag';

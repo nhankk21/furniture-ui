@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {ICartProduct, ICartTotal, IVwItem} from 'boundless-api-client';
+import {ICartProduct, ICartTotal, IVwItem} from 'Boundless-api-client';
 
 export interface CartState {
 	cartId: string | null;

@@ -1,4 +1,4 @@
-import {IFilterField, IFilterFieldRange, TCharacteristicType, TFilterFieldType} from 'boundless-api-client';
+import {IFilterField, IFilterFieldRange, TCharacteristicType, TFilterFieldType} from 'Boundless-api-client';
 import {TQuery} from '../@types/common';
 import {SyntheticEvent, useCallback, useEffect, useState} from 'react';
 import {apiClient} from '../lib/api';

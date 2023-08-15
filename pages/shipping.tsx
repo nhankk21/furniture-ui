@@ -11,41 +11,25 @@ export default function ShippingPage({mainMenu, footerMenu}: IShippingPageProps)
 				<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Shipping</h1>
 				<div className='text-container'>
 					<p>
-						<a href={'https://google.com'} target={'_blank'}>Lorem ipsum</a> dolor sit amet <b>consectetur</b> adipiscing elit facilisis
-						justo sodales, pharetra ut efficitur netus
-						suscipit sapien euismod viverra consequat duis diam, rutrum vitae auctor a dui cursus ante odio ornare.
-						<strong>Vivamus a dictum</strong> litora imperdiet elit ridiculus cursus venenatis primis, porttitor vel lectus dapibus
-						tristique quis conubia congue enim, <u>tempor donec</u> cubilia consequat integer <i>ornare felis euismod</i>. Eros enim
-						cras molestie ante varius malesuada cubilia vivamus dui montes ad, sed consectetur praesent vulputate purus
-						risus <em>tempus</em> posuere semper justo, metus parturient tincidunt suspendisse in tempor magna fermentum mollis conubia.
-						Elementum consequat duis platea a et, feugiat quis nostra iaculis ex gravida, pulvinar lorem commodo vitae.
-						Primis rutrum eleifend dui sociosqu ante conubia, faucibus turpis cras magnis pretium tortor, vitae euismod
-						ullamcorper lacinia feugiat semper, ornare sed vulputate venenatis consequat. Magnis pretium rhoncus est ante
-						auctor gravida diam maecenas porttitor, elementum himenaeos egestas tellus magna aliquet ornare.
+						Chúng tôi cam kết mang đến cho bạn trải nghiệm mua sắm trực tuyến đáng tin cậy và thuận tiện nhất. Chính vì vậy, chính sách giao hàng của chúng tôi được thiết kế để đảm bảo bạn nhận được sản phẩm đúng hẹn và trong tình trạng hoàn hảo.
 					</p>
-					<h1>What is Lorem Ipsum? (h1)</h1>
 					<p>
-						Facilisi mollis aliquam eget platea felis luctus, mi montes suspendisse volutpat libero dolor a, hac faucibus lectus id amet. Imperdiet sit dapibus nibh parturient adipiscing tellus, ridiculus habitasse aliquet semper eu duis, consequat sociosqu lacinia eros venenatis. Ut augue sed inceptos ante ex feugiat, vitae mollis purus vivamus. Vulputate semper elementum integer conubia himenaeos quisque velit diam, auctor euismod pretium morbi netus pulvinar nec praesent sit, sollicitudin nisl tempor dolor aliquam consequat sagittis.
+						<strong>Thời gian giao hàng:</strong> Chúng tôi cam kết giao hàng đúng theo thời gian đã cam kết khi bạn đặt hàng. Thời gian giao hàng có thể thay đổi tùy theo vị trí và khoảng cách. Chúng tôi sẽ thông báo rõ ràng về thời gian giao hàng cụ thể khi bạn xác nhận đơn hàng.
 					</p>
-					<h2>What is Lorem Ipsum? (h2)</h2>
 					<p>
-						Facilisi mollis aliquam eget platea felis luctus, mi montes suspendisse volutpat libero dolor a, hac faucibus lectus id amet. Imperdiet sit dapibus nibh parturient adipiscing tellus, ridiculus habitasse aliquet semper eu duis, consequat sociosqu lacinia eros venenatis. Ut augue sed inceptos ante ex feugiat, vitae mollis purus vivamus. Vulputate semper elementum integer conubia himenaeos quisque velit diam, auctor euismod pretium morbi netus pulvinar nec praesent sit, sollicitudin nisl tempor dolor aliquam consequat sagittis.
+						<strong>Phí giao hàng:</strong> Chúng tôi cung cấp dịch vụ giao hàng có phí dựa trên vị trí giao hàng và kích thước sản phẩm. Phí giao hàng sẽ được hiển thị rõ ràng trong quá trình thanh toán để bạn có thể xem trước và quyết định.
 					</p>
-					<h3>What is Lorem Ipsum? (h3)</h3>
 					<p>
-						Ex sollicitudin porttitor at a commodo eros cubilia rhoncus sapien montes, mattis mus risus auctor ridiculus etiam aliquam odio duis placerat laoreet, neque quisque imperdiet torquent lacinia dignissim volutpat posuere ut. Parturient maecenas quis etiam et class duis dui laoreet maximus lectus, montes himenaeos varius platea bibendum metus hac dignissim habitasse, elementum dis potenti pulvinar congue dolor malesuada placerat mattis. Felis ad ultrices in pulvinar litora eleifend vestibulum per, cursus iaculis lectus hendrerit urna nisl facilisi, vivamus adipiscing faucibus nulla dignissim hac quis. Cubilia adipiscing augue gravida torquent duis mi non platea, sit conubia vestibulum sem mus nec suspendisse, inceptos amet sodales netus aenean imperdiet ut. Magna iaculis interdum in sed quisque nibh vitae justo netus dolor nunc nec a elementum, consectetur mattis sapien amet tempus per est ante dictum lectus dui fusce.
+						<strong>Vận chuyển và đóng gói:</strong> Chúng tôi chú trọng đến việc đóng gói sản phẩm một cách cẩn thận để đảm bảo an toàn trong quá trình vận chuyển. Sản phẩm sẽ được đóng gói bằng vật liệu chất lượng cao để đảm bảo không bị hỏng hóc hay trầy xước.
 					</p>
-					<h4>What is Lorem Ipsum? (h4)</h4>
 					<p>
-						Ex sollicitudin porttitor at a commodo eros cubilia rhoncus sapien montes, mattis mus risus auctor ridiculus etiam aliquam odio duis placerat laoreet, neque quisque imperdiet torquent lacinia dignissim volutpat posuere ut. Parturient maecenas quis etiam et class duis dui laoreet maximus lectus, montes himenaeos varius platea bibendum metus hac dignissim habitasse, elementum dis potenti pulvinar congue dolor malesuada placerat mattis. Felis ad ultrices in pulvinar litora eleifend vestibulum per, cursus iaculis lectus hendrerit urna nisl facilisi, vivamus adipiscing faucibus nulla dignissim hac quis. Cubilia adipiscing augue gravida torquent duis mi non platea, sit conubia vestibulum sem mus nec suspendisse, inceptos amet sodales netus aenean imperdiet ut. Magna iaculis interdum in sed quisque nibh vitae justo netus dolor nunc nec a elementum, consectetur mattis sapien amet tempus per est ante dictum lectus dui fusce.
+						<strong>Theo dõi đơn hàng:</strong> Chúng tôi cung cấp tính năng theo dõi đơn hàng, giúp bạn dễ dàng kiểm tra tình trạng vận chuyển và biết được khi nào sản phẩm sẽ đến tay bạn.
 					</p>
-					<h5>What is Lorem Ipsum? (h5)</h5>
 					<p>
-						Ex sollicitudin porttitor at a commodo eros cubilia rhoncus sapien montes, mattis mus risus auctor ridiculus etiam aliquam odio duis placerat laoreet, neque quisque imperdiet torquent lacinia dignissim volutpat posuere ut. Parturient maecenas quis etiam et class duis dui laoreet maximus lectus, montes himenaeos varius platea bibendum metus hac dignissim habitasse, elementum dis potenti pulvinar congue dolor malesuada placerat mattis. Felis ad ultrices in pulvinar litora eleifend vestibulum per, cursus iaculis lectus hendrerit urna nisl facilisi, vivamus adipiscing faucibus nulla dignissim hac quis. Cubilia adipiscing augue gravida torquent duis mi non platea, sit conubia vestibulum sem mus nec suspendisse, inceptos amet sodales netus aenean imperdiet ut. Magna iaculis interdum in sed quisque nibh vitae justo netus dolor nunc nec a elementum, consectetur mattis sapien amet tempus per est ante dictum lectus dui fusce.
+						<strong>Chính sách đổi trả:</strong> Nếu bạn nhận được sản phẩm bị hỏng hoặc không đúng với mô tả, chúng tôi sẽ hỗ trợ đổi trả hoặc hoàn tiền trong vòng thời gian quy định. Xin vui lòng tham khảo chính sách đổi trả chi tiết trên trang web để biết thêm thông tin.
 					</p>
-					<h6>What is Lorem Ipsum? (h6)</h6>
 					<p>
-						Ex sollicitudin porttitor at a commodo eros cubilia rhoncus sapien montes, mattis mus risus auctor ridiculus etiam aliquam odio duis placerat laoreet, neque quisque imperdiet torquent lacinia dignissim volutpat posuere ut. Parturient maecenas quis etiam et class duis dui laoreet maximus lectus, montes himenaeos varius platea bibendum metus hac dignissim habitasse, elementum dis potenti pulvinar congue dolor malesuada placerat mattis. Felis ad ultrices in pulvinar litora eleifend vestibulum per, cursus iaculis lectus hendrerit urna nisl facilisi, vivamus adipiscing faucibus nulla dignissim hac quis. Cubilia adipiscing augue gravida torquent duis mi non platea, sit conubia vestibulum sem mus nec suspendisse, inceptos amet sodales netus aenean imperdiet ut. Magna iaculis interdum in sed quisque nibh vitae justo netus dolor nunc nec a elementum, consectetur mattis sapien amet tempus per est ante dictum lectus dui fusce.
+						Chúng tôi luôn sẵn sàng hỗ trợ và giải đáp mọi thắc mắc về chính sách giao hàng. Đảm bảo rằng quá trình nhận hàng diễn ra một cách suôn sẻ và bạn có được trải nghiệm mua sắm tốt nhất trên trang web của chúng tôi.
 					</p>
 				</div>
 			</div>

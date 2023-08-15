@@ -11,4 +11,8 @@ export interface IProduct {
   isActive: boolean;
 }
 
-export interface IProductResponse {}
+export interface IProductResponse {
+  data: {
+    items: IProduct[]
+  }
+}

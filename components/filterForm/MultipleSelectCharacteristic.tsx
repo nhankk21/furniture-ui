@@ -1,6 +1,6 @@
 import {IFilterFieldProps} from '../FilterForm';
 import {ChangeEvent, useEffect, useState} from 'react';
-import {ICharacteristicCase} from 'boundless-api-client';
+import {ICharacteristicCase} from 'Boundless-api-client';
 import Collapse from 'react-bootstrap/Collapse';
 
 export default function MultipleSelectCharacteristic({field, onChange, values, displayLimit, idsPrefix}: IFilterFieldProps) {

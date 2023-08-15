@@ -1,9 +1,9 @@
-import {ICartItem} from 'boundless-api-client';
+import {ICartItem} from 'Boundless-api-client';
 import Link from 'next/link';
 import {getCartImg} from '../../lib/imgs';
 import {getProductUrl} from '../../lib/urls';
 import NoImage from '../NoImage';
-import {TThumbRatio} from 'boundless-api-client';
+import {TThumbRatio} from 'Boundless-api-client';
 import {calcTotalPrice} from '../../lib/calculator';
 import useFormatCurrency from '../../hooks/useFormatCurrency';
 

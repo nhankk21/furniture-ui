@@ -1,19 +1,18 @@
 import clsx from 'clsx';
-// import {useAppDispatch} from '../../hooks/redux';
-// import {addItem2Cart} from '../../redux/actions/cart';
-// import {getProductUrl} from '../../lib/urls';
+import {useAppDispatch} from '../../hooks/redux';
+import {addItem2Cart} from '../../redux/actions/cart';
+import {getProductUrl} from '../../lib/urls';
 import ProductPrice from './ProductPrice';
 import {TQuery} from '../../@types/common';
 import Image from 'next/image';
 import {IProduct} from '../../interface/product';
+import Link from 'next/link';
+import ProductLabels from '../product/Labels';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCartPlus} from '@fortawesome/free-solid-svg-icons/faCartPlus';
 import NoImage from '../NoImage';
-// import Link from 'next/link';
-// import ProductLabels from '../product/Labels';
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import {faCartPlus} from '@fortawesome/free-solid-svg-icons/faCartPlus';
-// import NoImage from '../NoImage';
-// import {productImgRatio} from '../../lib/imgs';
-// import {TThumbRatio} from 'boundless-api-client';
+import {productImgRatio} from '../../lib/imgs';
+import {TThumbRatio} from 'Boundless-api-client';
 
 export default function ProductItem({
   product,
@@ -28,6 +27,7 @@ export default function ProductItem({
   // const productUrl = getProductUrl(product, params);
 
   return (
+   
     <li
       className={clsx(
         'products__item',
@@ -45,59 +45,58 @@ export default function ProductItem({
         {product?.imageUrl ? (
           <img
             src={product?.imageUrl}
-            // width={300}
-            // height={200}
+            width={270}
+            height={270}
             // quality={100}
             alt={product?.imageUrl}
           />
         ) : (
           <NoImage ratio='1/1' />
         )}
-        <h4 className='products__title'>
-          {/* <Link href={productUrl}>
-						<a itemProp='url'>
-							<span itemProp='name'>{product.title}</span>
-						</a>
-					</Link> */}
-        </h4>
-
+        <Link href={`/product/${product.id}`}>
+          <h4 className='products__title'>
+          
+            <span itemProp='name'>{product.name}</span>
+          </h4>
+         </Link>
         <div className={'products__offer-row'}>
           <div className='products__offer'>
             {product.price && <ProductPrice price={product.price} />}
           </div>
-          {/* <Product2Cart product={product} /> */}
+          { <Product2Cart product={product} /> }
         </div>
       </div>
-      {/* <ProductSchemaOrgMarkup product={product} /> */}
+      { <ProductSchemaOrgMarkup product={product} /> }
     </li>
+    
   );
 }
 
-// function Product2Cart({product}: {product: IProduct}) {
-//   const dispatch = useAppDispatch();
-//   const onAddToCart = () => dispatch(addItem2Cart(product.item_id, 1));
+function Product2Cart({product}: {product: IProduct}) {
+  const dispatch = useAppDispatch();
+  const onAddToCart = () => dispatch(addItem2Cart(product.id, 1, false));
 
-//   return (
-//     <div
-//       className={clsx('products__to-cart', {
-//         'products__to-cart_in-stock': product.in_stock,
-//         'products__to-cart_out-stock': !product.in_stock,
-//       })}
-//     >
-//       {product.in_stock ? (
-//         <button
-//           type={'button'}
-//           className='btn btn-to-cart products__to-cart-btn'
-//           onClick={onAddToCart}
-//         >
-//           <FontAwesomeIcon icon={faCartPlus} />
-//         </button>
-//       ) : (
-//         <span className={'text-muted'}>Out of stock</span>
-//       )}
-//     </div>
-//   );
-// }
+  return (
+    <div
+      className={clsx('products__to-cart', {
+        'products__to-cart_in-stock': product.qty,
+        'products__to-cart_out-stock': !product.qty,
+      })}
+    >
+      {product.qty ? (
+        <button
+          type={'button'}
+          className='btn btn-to-cart products__to-cart-btn'
+          onClick={onAddToCart}
+        >
+          <FontAwesomeIcon icon={faCartPlus} />
+        </button>
+      ) : (
+        <span className={'text-muted'}>Đã hết hàng</span>
+      )}
+    </div>
+  );
+}
 
 // function ProductImage({product, productUrl}: {product: IProduct, productUrl: string}) {
 // 	const img = product.images!.find(({is_default}) => is_default);
@@ -115,34 +114,31 @@ export default function ProductItem({
 // 	);
 // }
 
-// function ProductSchemaOrgMarkup({product}: {product: IProduct}) {
-// 	const schemaAvailability = product.in_stock ? '//schema.org/InStock' : '//schema.org/OutOfStock';
+function ProductSchemaOrgMarkup({product}: {product: IProduct}) {
+	const schemaAvailability = product.qty ? '//schema.org/InStock' : '//schema.org/OutOfStock';
 
-// 	return (
-// 		<>
-// 			<meta itemProp='productID' content={String(product.product_id)} />
-// 			<meta itemProp='brand' content={product.manufacturer?.title || ''} />
-// 			<meta itemProp='sku' content={product.sku || ''} />
-// 			{product.price &&
-// 			(product.price?.min
-// 					?
-// 					<div itemProp='offers' itemScope itemType='//schema.org/AggregateOffer'>
-// 						<meta itemProp='lowPrice' content={String(product.price.min)} />
-// 						<meta itemProp='highPrice' content={String(product.price.max)} />
-// 						<meta itemProp='priceCurrency' content={product.price.currency_alias?.toUpperCase()} />
-// 						<link itemProp='availability' href={schemaAvailability} />
-// 					</div>
-// 					:
-// 					<div itemProp='offers' itemScope itemType='//schema.org/Offer'>
-// 						<meta itemProp='price' content={String(product.price.value)} />
-// 						<meta itemProp='priceCurrency' content={product.price.currency_alias?.toUpperCase()} />
-// 						<link itemProp='availability' href={schemaAvailability} />
-// 					</div>
-// 			)
-// 			}
-// 		</>
-// 	);
-// }
+	return (
+		<>
+			<meta itemProp='productID' content={String(product.qty)} />
+			{product.price &&
+			(product.price
+					?
+					<div itemProp='offers' itemScope itemType='//schema.org/AggregateOffer'>
+						<meta itemProp='lowPrice' content={String(product.price)} />
+						<meta itemProp='highPrice' content={String(product.price)} />
+						
+						<link itemProp='availability' href={schemaAvailability} />
+					</div>
+					:
+					<div itemProp='offers' itemScope itemType='//schema.org/Offer'>
+					
+						<link itemProp='availability' href={schemaAvailability} />
+					</div>
+			)
+			}
+		</>
+	);
+}
 
 interface IProductItemProps {
   product: IProduct;

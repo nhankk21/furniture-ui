@@ -1,4 +1,4 @@
-import {IProduct} from 'boundless-api-client';
+import {IProduct} from 'Boundless-api-client';
 import clsx from 'clsx';
 import {useAppDispatch} from '../../hooks/redux';
 import {addItem2Cart} from '../../redux/actions/cart';
@@ -9,7 +9,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCartPlus} from '@fortawesome/free-solid-svg-icons/faCartPlus';
 import NoImage from '../NoImage';
 import {productImgRatio} from '../../lib/imgs';
-import {TThumbRatio} from 'boundless-api-client';
+import {TThumbRatio} from 'Boundless-api-client';
 import ProductPrice from '../productsList/ProductPrice';
 import ProductListImage from '../productsList/ProductImage';
 

@@ -6,8 +6,8 @@ import {makeAllMenus} from '../lib/menu';
 // import VerticalMenu from '../components/VerticalMenu';
 import {IMenuItem} from '../@types/components';
 import SwiperSlider from '../components/SwiperSlider';
-import mobileSlider1Img from '../assets/mobile-slider-1.png';
-import mobileSlider2Img from '../assets/mobile-slider-2.png';
+import mobileSlider1Img from '../assets/item-slide-1.jpg';
+import mobileSlider2Img from '../assets/item-slide-2.jpg';
 // import CoverTextInCenter from '../components/CoverTextInCenter';
 // import bgImg from '../assets/cover-bg.jpeg';
 // import bgPortraitImg from '../assets/cover-bg-portrait.jpg';
@@ -16,6 +16,7 @@ import {faBug} from '@fortawesome/free-solid-svg-icons/faBug';
 import {faShieldAlt} from '@fortawesome/free-solid-svg-icons/faShieldAlt';
 import {faSmile} from '@fortawesome/free-solid-svg-icons/faSmile';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons'; 
 import {IBasicSettings} from '../@types/settings';
 import axios from '../lib/axios';
 import {API_GET_PRODUCT} from '../constants/api_key';
@@ -36,7 +37,7 @@ export default function IndexPage({
       <div className='container-xxl'>
         <MainPageSlider />
         <h1 className='page-heading page-heading_h1  page-heading_m-h1'>
-          Furniture Store
+        Furniture Store
         </h1>
         <ProductsList
           products={products}
@@ -49,12 +50,12 @@ export default function IndexPage({
           {
             icon: (
               <FontAwesomeIcon
-                icon={faBug}
+                icon={faHeart}
                 className={'text-with-icons__icon'}
               />
             ),
-            title: 'Does not slip in the hands',
-            comment: 'Anti-slip coating - for reliability.',
+            title: 'Dịch vụ tiện lợi, đa dạng',
+            comment: 'Luôn cố gắng để đem tới bạn trải nhiệm tốt nhất',
           },
           {
             icon: (
@@ -63,8 +64,8 @@ export default function IndexPage({
                 className={'text-with-icons__icon'}
               />
             ),
-            title: 'Extra phone protection',
-            comment: 'Anti-slip coating - for reliability.',
+            title: 'Uy tín chất lượng',
+            comment: 'Uy tín tạo nên thương hiệu',
           },
           {
             icon: (
@@ -73,8 +74,8 @@ export default function IndexPage({
                 className={'text-with-icons__icon'}
               />
             ),
-            title: 'Looks nice',
-            comment: 'With our cases your phone look even better than without.',
+            title: 'Hài lòng khách hàng',
+            comment: 'Sự hài lòng của các bạn là niềm vui của chúng tôi',
           },
         ]}
         fullWidth={true}
@@ -90,32 +91,18 @@ export const getServerSideProps: GetServerSideProps<
   const categoryTree = await apiClient.catalog.getCategoryTree({
     menu: 'category',
   });
-  const {products} = axios
-    .get<IProductResponse>(API_GET_PRODUCT)
+  const products = await axios
+    .get<IProductResponse>(API_GET_PRODUCT,{params: {page:1, limit:8}})
     .then((res) => res.data);
   const basicSettings = (await apiClient.system.fetchSettings([
     'system.locale',
     'system.currency',
   ])) as IBasicSettings;
-
   const menus = makeAllMenus({categoryTree});
 
   return {
     props: {
-      products: [
-        {
-          name: 'Bộ bàn ghế gỗ lim',
-          description: 'Bàn ghế gỗ lim nhập khẩu',
-          price: 50000000,
-          imageUrl:
-            'https://xuongdogogiagoc.com/wp-content/uploads/2018/12/bo-au-a-go-lim-1.jpg',
-          categoryId: 1,
-          supplierId: 7,
-          unit: 'Bộ',
-          qty: 15,
-          isActive: false,
-        },
-      ],
+      products: products?.data?.items,
       basicSettings,
       ...menus,
     },
@@ -134,7 +121,7 @@ function MainPageSlider() {
     {
       img: mobileSlider1Img.src,
       link: '',
-      caption: 'Decorate your phone with our cases!',
+      caption: 'Các sản phẩm gỗ chất lượng!',
       captionPosition: 'bottom',
       useFilling: true,
       fillingColor: '#000000',
@@ -143,7 +130,7 @@ function MainPageSlider() {
     {
       img: mobileSlider2Img.src,
       link: '',
-      caption: 'Pray not for easy lives, pray to be stronger men.',
+      caption: 'Đa dạng các sản phẩm từ nhiều nhà cung cấp',
       captionPosition: 'bottom',
       useFilling: true,
       fillingColor: '#000000',

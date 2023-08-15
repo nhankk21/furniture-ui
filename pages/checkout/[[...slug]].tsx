@@ -1,5 +1,5 @@
 import {useCart} from '../../hooks/cart';
-import {startCheckout, StarterWrapper, resetCheckoutState} from 'boundless-checkout-react';
+import {startCheckout, StarterWrapper, resetCheckoutState} from 'Boundless-checkout-react';
 import {useRouter} from 'next/router';
 import {apiClient} from '../../lib/api';
 import {TCartInited} from '../../redux/reducers/cart';
@@ -7,7 +7,7 @@ import Loader from '../../components/Loader';
 import logoImg from '../../assets/logo.svg';
 import Head from 'next/head';
 import {useCallback, useEffect, useRef} from 'react';
-import {createGetStr} from 'boundless-api-client/utils';
+import {createGetStr} from 'Boundless-api-client/utils';
 
 export default function CheckoutPage() {
 	const {id: cartId, cartInited} = useCart();

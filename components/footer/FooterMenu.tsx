@@ -5,21 +5,42 @@ import {IMenuItem} from '../../@types/components';
 export default function FooterMenu({menuList}: { menuList: IMenuItem[] }) {
 	return (
 		<>
-			<h3 className='page-footer__header'>Most popular</h3>
+			<h3 className='page-footer__header'>Sản phẩm phổ biến</h3>
 			<ul className='page-footer-menu list-unstyled' itemScope itemType='//schema.org/ItemList'>
-				{menuList.map((item, i) => (
-					<li
-						className={clsx('page-footer-menu__list-element', {
-							active: item.isActive,
-						})}
-						key={item.title + i}
-					>
-						<div itemProp='itemListElement' itemScope itemType='//schema.org/ListItem'>
-							<ListElement item={item} position={i}/>
-						</div>
-					</li>
-				))}
+				<li className='page-footer-menu__list-element'>
+					<div itemProp='itemListElement' itemScope itemType='//schema.org/ListItem'>
+						<a itemProp='url'>
+							<span itemProp='name' style={{ color: 'white' }}>Bàn ghế gỗ</span>
+						</a>
+						<meta itemProp='position' content='0' />
+					</div>
+				</li>
+				<li className='page-footer-menu__list-element'>
+					<div itemProp='itemListElement' itemScope itemType='//schema.org/ListItem'>
+						<a itemProp='url'>
+							<span itemProp='name' style={{ color: 'white' }}>Tủ gỗ</span>
+						</a>
+						<meta itemProp='position' content='1' />
+					</div>
+				</li>
+				<li className='page-footer-menu__list-element'>
+					<div itemProp='itemListElement' itemScope itemType='//schema.org/ListItem'>
+						<a itemProp='url'>
+							<span itemProp='name' style={{ color: 'white' }}>Kệ rượu</span>
+						</a>
+						<meta itemProp='position' content='2' />
+					</div>
+				</li>
+				<li className='page-footer-menu__list-element'>
+					<div itemProp='itemListElement' itemScope itemType='//schema.org/ListItem'>
+						<a itemProp='url'>
+							<span itemProp='name' style={{ color: 'white' }}>Sản phẩm mỹ nghệ</span>
+						</a>
+						<meta itemProp='position' content='3' />
+					</div>
+				</li>
 			</ul>
+
 		</>
 	);
 }

@@ -1,4 +1,4 @@
-import {IItemSize} from 'boundless-api-client';
+import {IItemSize} from 'Boundless-api-client';
 
 const LENGTH_MEASURE_UNIT = 'cm.';
 const WEIGHT_MEASURE_UNIT = 'kg.';

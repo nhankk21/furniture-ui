@@ -1,4 +1,4 @@
-import {ICategoryFlatItem, IProductItem} from 'boundless-api-client';
+import {ICategoryFlatItem, IProductItem} from 'Boundless-api-client';
 import {getProductItemUrl} from '../../lib/urls';
 
 export default function MetaSchemaOrg({product, parents}: IProductMetaProps) {

@@ -1,4 +1,4 @@
-import {ICategoryFlatItem} from 'boundless-api-client';
+import {ICategoryFlatItem} from 'Boundless-api-client';
 import {TQuery} from '../@types/common';
 import {IBreadCrumbItem} from '../@types/components';
 import {getCategoryUrl} from './urls';

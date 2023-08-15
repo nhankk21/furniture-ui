@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {IProductItem, IProductVariant} from 'boundless-api-client';
+import {IProductItem, IProductVariant} from 'Boundless-api-client';
 import ProductVariantPicker from './VariantPicker';
 import ProductPriceAndBuy from './PriceAndBuy';
 import clsx from 'clsx';

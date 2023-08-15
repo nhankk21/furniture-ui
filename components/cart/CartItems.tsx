@@ -1,4 +1,4 @@
-import {ICartItem} from 'boundless-api-client';
+import {ICartItem} from 'Boundless-api-client';
 import {Dispatch, SetStateAction, useEffect, useMemo, useRef, useState} from 'react';
 import {useAppDispatch, useAppSelector} from '../../hooks/redux';
 import {apiClient} from '../../lib/api';
@@ -42,14 +42,14 @@ export default function CartItems({items, setItems, total}: ICartItemsProps) {
 
 		submits.current.push(promise);
 		dispatch(addPromise(promise));
-		setItems(prevItems => prevItems.filter(el => el.item_id !== itemId));
+		setItems(prevItems => prevItems.filter(el => el.product_id !== itemId));
 	};
 
 	const submitQty = async (itemId: number, newQty: number) => {
 		if (!cartId) return;
 
 		const promise = apiClient.cart.setCartItemsQty(cartId, [{
-			item_id: itemId,
+			product_id: itemId,
 			qty: newQty
 		}])
 			.then(() => checkBgSubmits());
@@ -67,7 +67,7 @@ export default function CartItems({items, setItems, total}: ICartItemsProps) {
 
 		setItems(prevFiltered => {
 			const out = [...prevFiltered];
-			const index = out.findIndex(el => el.item_id === itemId);
+			const index = out.findIndex(el => el.product_id === itemId);
 			if (index >= 0) {
 				out[index].qty = newQty;
 			}
@@ -87,26 +87,26 @@ export default function CartItems({items, setItems, total}: ICartItemsProps) {
 			<div className='cart-items'>
 				<div className='cart-items__thead row'>
 					<div className='cart-items__thead-cell col-md-4'></div>
-					<div className='cart-items__thead-cell col-md-2'>Price</div>
-					<div className='cart-items__thead-cell col-md-2'>Qty</div>
-					<div className='cart-items__thead-cell col-md-2'>Total</div>
+					<div className='cart-items__thead-cell col-md-2'>Giá</div>
+					<div className='cart-items__thead-cell col-md-2'>Số lượng</div>
+					<div className='cart-items__thead-cell col-md-2'>Tổng</div>
 					<div className='cart-items__thead-cell col-md-2'></div>
 				</div>
 				{items.map(item => (
 					<CartRow
 						item={item}
-						rmItem={() => rmItem(item.item_id)} key={item.item_id}
-						onQtyChange={(qty: number) => onQtyChange(item.item_id, qty)}
+						rmItem={() => rmItem(item.product_id)} key={item.product_id}
+						onQtyChange={(qty: number) => onQtyChange(item.product_id, qty)}
 					/>
 				))}
 				<div className='cart-items__total-row row'>
-					<div className='cart-items__total-cell cart-items__total-cell_title col-md-6'>Order Total:</div>
+					<div className='cart-items__total-cell cart-items__total-cell_title col-md-6'>Tổng giá trị đơn hàng:</div>
 					<div className='cart-items__total-cell col-md-2'>
-						<span className='cart-items__label'>Qty: </span>
+						<span className='cart-items__label'>Số lượng: </span>
 						{total.qty}
 					</div>
 					<div className='cart-items__total-cell col-md-2'>
-						<span className='cart-items__label'>Price: </span>
+						<span className='cart-items__label'>Giá: </span>
 						{total.price}
 					</div>
 				</div>
@@ -117,7 +117,7 @@ export default function CartItems({items, setItems, total}: ICartItemsProps) {
 					disabled={submitting}
 					onClick={() => router.push('/checkout')}
 				>
-					Proceed to checkout <FontAwesomeIcon icon={faShoppingCart} />
+					Tiến hành thanh toán <FontAwesomeIcon icon={faShoppingCart} />
 				</button>
 			</div>
 		</>

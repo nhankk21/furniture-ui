@@ -16,7 +16,7 @@ import {IBasicSettings} from '../@types/settings';
 import {useDispatch} from 'react-redux';
 import {setBasicSettings} from '../redux/reducers/app';
 
-const shopBaseUrl = process.env.BOUNDLESS_BASE_URL || '';
+const shopBaseUrl = process.env.Boundless_BASE_URL || '';
 
 export default function MainLayout({children, title, metaData, mainMenu, footerMenu, noIndex, basicSettings}: IMainLayoutProps) {
 	const dispatch = useDispatch();
@@ -46,14 +46,14 @@ export default function MainLayout({children, title, metaData, mainMenu, footerM
 				<meta name='theme-color' content='#ffffff' />
 
 				<meta property='og:type' content='website' />
-				<meta property='og:title' content={title || 'Boundless-Commerce Shop Example'} />
+				<meta property='og:title' content={title || 'Furniture store'} />
 				<meta property='og:url' content={canonicalUrl || shopBaseUrl} />
 				<meta property='og:image' content={imgUrl || (shopBaseUrl + '/og.jpeg')} />
 				{description && <meta property='og:description' content={description} />}
 
-				<title>{title || 'Boundless-Commerce Shop Example'}</title>
+				<title>{title || 'Furniture store'}</title>
 
-				<link rel='preconnect' href={process.env.BOUNDLESS_API_BASE_URL || 'https://api.boundless-commerce.com'} crossOrigin={'crossOrigin'} />
+				<link rel='preconnect' href={process.env.Boundless_API_BASE_URL || 'https://api.Boundless-commerce.com'} crossOrigin={'crossOrigin'} />
 				{noIndex && <meta name='robots' content='noindex' />}
 			</Head>
 			<AlertWidget />

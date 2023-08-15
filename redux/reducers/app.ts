@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {ICurrency, ILocaleSettings} from 'boundless-api-client';
+import {ICurrency, ILocaleSettings} from 'Boundless-api-client';
 
 const appSlice = createSlice({
 	name: 'app',

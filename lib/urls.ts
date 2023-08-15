@@ -1,11 +1,11 @@
-import {ICategory, ICategoryItem} from 'boundless-api-client';
-import {IProduct, IProductItem} from 'boundless-api-client';
-import {createGetStr} from 'boundless-api-client/utils';
+import {ICategory, ICategoryItem} from 'Boundless-api-client';
+import {IProduct, IProductItem} from 'Boundless-api-client';
+import {createGetStr} from 'Boundless-api-client/utils';
 import {TQuery} from '../@types/common';
 
 const CATEGORY_PREFIX = '/category';
 const PRODUCTS_PREFIX = '/product';
-const shopBaseUrl = process.env.BOUNDLESS_BASE_URL || '';
+const shopBaseUrl = process.env.Boundless_BASE_URL || '';
 
 export const getCategoryUrl = (category: ICategoryUrlPartial, params?: TQuery) => {
 	const basePath = category.custom_link || `${CATEGORY_PREFIX}/${category.url_key || category.category_id}`;

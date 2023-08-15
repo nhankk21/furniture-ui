@@ -1,5 +1,5 @@
 import {useState, useMemo, ChangeEvent, MouseEvent} from 'react';
-import {IProductItem, IProductVariant} from 'boundless-api-client';
+import {IProductItem, IProductVariant} from 'Boundless-api-client';
 import clsx from 'clsx';
 import {useAppDispatch} from '../../hooks/redux';
 import {addItem2Cart} from '../../redux/actions/cart';

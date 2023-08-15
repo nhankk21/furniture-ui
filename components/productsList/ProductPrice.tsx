@@ -9,10 +9,14 @@ export default function ProductPrice({
   className?: string;
 }) {
   const {formatCurrency} = useFormatCurrency();
+  const formattedPrice = new Intl.NumberFormat('vi-VN', {
+    style: 'currency',
+    currency: 'VND',
+  }).format(price);
 
   return (
     <div className={className}>
-      <span className={clsx('current')}>{formatCurrency(price)}</span>
+      <span className={clsx('current')}>{formattedPrice}</span>
     </div>
   );
 }

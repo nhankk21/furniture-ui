@@ -1,6 +1,6 @@
 import {IFilterFieldProps} from '../FilterForm';
 import React, {ChangeEvent, useEffect, useState} from 'react';
-import {IProductManufacturer} from 'boundless-api-client';
+import {IProductManufacturer} from 'Boundless-api-client';
 import {TQuery} from '../../@types/common';
 import Collapse from 'react-bootstrap/Collapse';
 

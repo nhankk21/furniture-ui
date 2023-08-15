@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import ProductImage from './ProductImage';
 import {getMetaImgUrl, getProductImg, productImgRatio} from '../../lib/imgs';
 import NoImage from '../NoImage';
-import {IProductItem} from 'boundless-api-client';
+import {IProductItem} from 'Boundless-api-client';
 import dynamic from 'next/dynamic';
 import {Item, Gallery, useGallery} from 'react-photoswipe-gallery';
 

@@ -1,4 +1,4 @@
-import {INonVariantCaracteristic} from 'boundless-api-client';
+import {INonVariantCaracteristic} from 'Boundless-api-client';
 
 export default function CharacteristicItem({characteristic}: {characteristic: INonVariantCaracteristic}) {
 	return (

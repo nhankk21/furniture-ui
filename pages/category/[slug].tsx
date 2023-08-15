@@ -7,12 +7,12 @@ import qs from 'qs';
 import {apiClient} from '../../lib/api';
 import {getCategoryItemUrl} from '../../lib/urls';
 import {filterProductsQuery} from '../../lib/category';
-import {createGetStr} from 'boundless-api-client/utils';
+import {createGetStr} from 'Boundless-api-client/utils';
 import {getCategoryMetaData} from '../../lib/meta';
 import {makeAllMenus} from '../../lib/menu';
 import {IMenuItem} from '../../@types/components';
 import {makeBreadCrumbsFromCats} from '../../lib/breadcrumbs';
-import {IProduct, ICategoryItem, IPagination} from 'boundless-api-client';
+import {IProduct, ICategoryItem, IPagination} from 'Boundless-api-client';
 import {TQuery} from '../../@types/common';
 
 import MainLayout from '../../layouts/Main';

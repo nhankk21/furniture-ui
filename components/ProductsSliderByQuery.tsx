@@ -1,4 +1,4 @@
-import {IGetProductsParams, IProduct} from 'boundless-api-client';
+import {IGetProductsParams, IProduct} from 'Boundless-api-client';
 import {useEffect, useState} from 'react';
 import {useAppDispatch} from '../hooks/redux';
 import {apiClient} from '../lib/api';

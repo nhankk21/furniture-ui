@@ -1,4 +1,4 @@
-import {ICategoryItem, IProductItem} from 'boundless-api-client';
+import {ICategoryItem, IProductItem} from 'Boundless-api-client';
 import {getMetaImgUrl} from './imgs';
 import {getCanonicalCategoryUrl, getCanonicalProductUrl} from './urls';
 

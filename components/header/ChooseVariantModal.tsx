@@ -5,7 +5,7 @@ import {RootState} from '../../redux/store';
 import ProductVariantAndBuy from '../product/VariantAndBuy';
 import ProductImage from '../productsList/ProductImage';
 import NoImage from '../NoImage';
-import {TThumbRatio} from 'boundless-api-client';
+import {TThumbRatio} from 'Boundless-api-client';
 
 export default function ChooseVariantModal() {
 	const dispatch = useAppDispatch();

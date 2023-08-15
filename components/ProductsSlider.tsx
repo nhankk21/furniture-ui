@@ -1,5 +1,5 @@
 import {useRef} from 'react';
-import {IProduct} from 'boundless-api-client';
+import {IProduct} from 'Boundless-api-client';
 import {Swiper, SwiperProps, SwiperSlide} from 'swiper/react';
 import SwiperCore, {Navigation, Scrollbar} from 'swiper';
 import SliderProductItem from './productsSlider/SliderProductItem';

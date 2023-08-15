@@ -3,7 +3,7 @@ import https from 'https';
 import {readCache} from './dataCache';
 import {KEY_CACHE} from '../constants/data';
 
-const baseURL = process.env.BOUNDLESS_BASE_URL;
+const baseURL = process.env.Boundless_BASE_URL;
 
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,

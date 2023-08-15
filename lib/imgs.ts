@@ -1,8 +1,8 @@
-import {TThumbRatio} from 'boundless-api-client';
+import {TThumbRatio} from 'Boundless-api-client';
 import {apiClient} from './api';
 
 //fixed aspect ratio for product images
-export const productImgRatio = process.env.BOUNDLESS_PRODUCTS_IMAGE_PROPORTION as TThumbRatio || null;
+export const productImgRatio = process.env.Boundless_PRODUCTS_IMAGE_PROPORTION as TThumbRatio || null;
 
 export function getProductsListImg(image: IImagePartial, maxSize: number): IImageData {
 	const {width, height, path: imgLocalPath} = image;

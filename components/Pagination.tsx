@@ -1,5 +1,5 @@
-import {IPagination} from 'boundless-api-client';
-import {createGetStr} from 'boundless-api-client/utils';
+import {IPagination} from 'Boundless-api-client';
+import {createGetStr} from 'Boundless-api-client/utils';
 import clsx from 'clsx';
 import {useRouter} from 'next/router';
 import React from 'react';

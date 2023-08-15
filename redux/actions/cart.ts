@@ -21,7 +21,7 @@ export const initCart = (): AppThunk => async (dispatch, getState) => {
 	dispatch(setInitStatus(TCartInited.processing));
 	try {
 		const cartInfo = await getCartByCookieOrRetrieve();
-		Cookie.set('boundless_cart_id', cartInfo.id, {expires: 365, sameSite: 'None', secure: true});
+		Cookie.set('Boundless_cart_id', cartInfo.id, {expires: 365, sameSite: 'None', secure: true});
 
 		dispatch(setCartInited(cartInfo));
 	} catch (err) {
@@ -31,7 +31,7 @@ export const initCart = (): AppThunk => async (dispatch, getState) => {
 };
 
 export const getCartByCookieOrRetrieve = async () => {
-	const cartId = Cookie.get('boundless_cart_id');
+	const cartId = Cookie.get('Boundless_cart_id');
 	if (cartId) {
 		try {
 			return await apiClient.cart.getCartInfo(cartId);

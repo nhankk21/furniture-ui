@@ -3,7 +3,7 @@ import {
   ICategoryFlatItem,
   IGetProductsParams,
   IProductItem,
-} from 'boundless-api-client';
+} from 'Boundless-api-client';
 import {GetStaticPaths, GetStaticProps, InferGetStaticPropsType} from 'next';
 import MainLayout from '../../layouts/Main';
 import {apiClient} from '../../lib/api';
@@ -76,7 +76,7 @@ export default function ProductPage({
 
       return {};
     });
-  }, [resolvedParents, query]); //eslint-disable-line
+  }, [resolvedParents, query]); 
 
   return (
     <MainLayout
@@ -178,7 +178,7 @@ export const getStaticProps: GetStaticProps<IProductPageProps> = async ({
   if (data?.product?.text.url_key && data?.product?.text.url_key !== slug) {
     return {
       redirect: {
-        destination: `/product/${data?.product?.text.url_key}`,
+        destination: `/product/${dat}`,
         permanent: true,
       },
     };

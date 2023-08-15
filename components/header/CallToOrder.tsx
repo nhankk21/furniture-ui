@@ -6,7 +6,7 @@ import {hideCall2Order} from '../../redux/reducers/cart';
 import {RootState} from '../../redux/store';
 import ProductImage from '../productsList/ProductImage';
 import NoImage from '../NoImage';
-import {TThumbRatio} from 'boundless-api-client';
+import {TThumbRatio} from 'Boundless-api-client';
 import {faCheck} from '@fortawesome/free-solid-svg-icons/faCheck';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {useEffect, useState} from 'react';

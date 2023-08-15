@@ -1,4 +1,4 @@
-import {ICurrency, ILocaleSettings} from 'boundless-api-client';
+import {ICurrency, ILocaleSettings} from 'Boundless-api-client';
 
 export interface IBasicSettings {
 	'system.locale': ILocaleSettings,

@@ -1,6 +1,6 @@
-import {IVariantCharacteristic, IVariantIdCombinations} from 'boundless-api-client';
+import {IVariantCharacteristic, IVariantIdCombinations} from 'Boundless-api-client';
 import {MouseEvent} from 'react';
-import {IProductVariant} from 'boundless-api-client';
+import {IProductVariant} from 'Boundless-api-client';
 import clsx from 'clsx';
 
 // values, onSelect, idCombinations

@@ -1,4 +1,4 @@
-import {ICartItem} from 'boundless-api-client';
+import {ICartItem} from 'Boundless-api-client';
 import {useCallback, useEffect, useMemo, useState} from 'react';
 import CartItems from '../components/cart/CartItems';
 import {useAppDispatch} from '../hooks/redux';
@@ -32,7 +32,7 @@ export default function CartPage({mainMenu, footerMenu, basicSettings}: ICartPag
 				<div className='cart-page row'>
 					<div className='col-lg-8 offset-lg-2'>
 						{router.query.error && <div className={'alert alert-danger'} role={'alert'}>{router.query.error}</div>}
-						<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Shopping cart</h1>
+						<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Giỏ hàng</h1>
 						<div className='cart-page__content'>
 							{(loading || cartInited === TCartInited.processing)
 								? <CartLoader />
@@ -40,11 +40,11 @@ export default function CartPage({mainMenu, footerMenu, basicSettings}: ICartPag
 									? <CartItems items={items} setItems={setItems} total={total}/>
 									: <>
 										<p className='cart-page__warning'>
-											Your shopping cart is empty.
+											Giỏ hàng rỗng, mua hàng thôi!
 										</p>
 										<p className='cart-page__warning'>
 											<Link href='/'>
-												<a className='btn btn-success'>Go shopping!</a>
+												<a className='btn btn-success'>Mua hàng!</a>
 											</Link>
 										</p>
 									</>}
@@ -104,7 +104,7 @@ const useCartItems = () => {
 
 	const total = useMemo(() => calcTotal(items.map(el => ({
 		qty: el.qty,
-		price: calcTotalPrice(el.itemPrice.final_price!, el.qty)
+		price: calcTotalPrice(el.price!, el.qty)
 	}))), [items]);
 
 	useEffect(() => {

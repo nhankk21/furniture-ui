@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import SwiperCore, {Pagination, Navigation} from 'swiper';
-import {IProductImage} from 'boundless-api-client';
+import {IProductImage} from 'Boundless-api-client';
 import ProductImage from './ProductImage';
 
 export default function ImagesSlider({images, onClick}: ImagesSliderProps) {

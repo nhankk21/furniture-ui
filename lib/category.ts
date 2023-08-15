@@ -1,4 +1,4 @@
-import {IGetProductsParams} from 'boundless-api-client';
+import {IGetProductsParams} from 'Boundless-api-client';
 import {TQuery} from '../@types/common';
 
 export const filterKeys = ['brand', 'price_min', 'price_max', 'props', 'in_stock'];

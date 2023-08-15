@@ -31,7 +31,7 @@ export default function MarsLogoRow() {
           </Link>
         </div>
         <div className={'mars-logo-row__welcome'}>
-          Welcome to our shop. We are working for you!
+          Chào mừng bạn đến với cửa hàng chúng tôi! Chúc bạn có 1 trải nghiệm mua hàng thú vị!
         </div>
         <div className={'mars-logo-row__at-right'}>
           <HeaderCart

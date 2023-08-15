@@ -1,4 +1,4 @@
-import {IItemSize, INonVariantCaracteristic, IProductItemManufacturer} from 'boundless-api-client';
+import {IItemSize, INonVariantCaracteristic, IProductItemManufacturer} from 'Boundless-api-client';
 import React from 'react';
 import CharacteristicItem from './characteristics/CharacteristicItem';
 import Manufacturer from './characteristics/Manufacturer';

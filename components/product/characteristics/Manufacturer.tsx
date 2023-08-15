@@ -1,4 +1,4 @@
-import {IProductItemManufacturer} from 'boundless-api-client';
+import {IProductItemManufacturer} from 'Boundless-api-client';
 import {getManufacturerImg} from '../../../lib/imgs';
 
 export default function Manufacturer({manufacturer}: {manufacturer: IProductItemManufacturer}) {
